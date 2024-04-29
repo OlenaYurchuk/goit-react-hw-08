@@ -1,7 +1,7 @@
 import { useAuth } from '../../hooks/useAuth';
 import Navigation from '../Navigation/Navigation';
 import UserMenu from '../UserMenu/UserMenu';
-import LoggedNav from '../LoggedNav/LoggedNav';
+import AuthNav from '../AuthNav/AuthNav';
 
 export default function AppBar() {
   const { isLoggedIn } = useAuth();
@@ -9,7 +9,7 @@ export default function AppBar() {
   return (
     <div>
       <Navigation />
-      {isLoggedIn ? <UserMenu /> : <LoggedNav />}
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </div>
   )
 }

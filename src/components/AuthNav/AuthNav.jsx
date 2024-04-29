@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import css from '../LoggedNav/LoggedNav.module.css'
+import css from '../AuthNav/AuthNav.module.css'
 
 export default function LoggedNav() {
   return (
