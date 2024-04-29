@@ -4,8 +4,7 @@ import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/auth/operations';
-import { Notify } from 'notiflix';
+import { register } from '../../redux/auth/operations';
 
 export default function RegisterForm() {
   const dispatch = useDispatch();
@@ -39,7 +38,7 @@ export default function RegisterForm() {
     dispatch(register(values))
       .unwrap()
       .then(originalPromiseResult => {
-        Notify.success(`${originalPromiseResult.user.name} welcome!`);
+        toast.success(`${originalPromiseResult.user.name} welcome!`);
       })
       .catch(() => {
         toast.error("Sorry, something's wrong");
