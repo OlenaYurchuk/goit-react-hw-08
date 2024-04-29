@@ -5,9 +5,9 @@ import { Route, Routes } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { refreshUser } from '../redux/auth/operations'
 
-import Layout from './Layout';
-import PrivateRoute from './PrivateRoute';
-import RestrictedRoute from './RestrictedRoute';
+import Layout from '../components/Layout';
+import PrivateRoute from '../components/PrivateRoute';
+import RestrictedRoute from '../components/RestrictedRoute';
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const RegistrationPage = lazy(() => import('../pages/RegistrationPage/RegistrationPage'));
