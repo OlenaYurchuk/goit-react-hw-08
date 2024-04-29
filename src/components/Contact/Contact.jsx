@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contacts/operations';
-import { FaUser, FaPhoneAlt, FaUserMinus } from 'react-icons/fa';
+import { FaUser } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa6";
 import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 import css from '../Contact/Contact.module.css';
@@ -29,11 +30,10 @@ export default function Contact({ id, name, number }) {
         {name}
       </p>
       <p className={css.number}>
-        <FaPhoneAlt />
+        <FaPhone />
         {number}
       </p>
       <button className={css.button} onClick={() => handleDeleteContact(id)}>
-        <FaUserMinus />
         Delete
       </button>
     </div>

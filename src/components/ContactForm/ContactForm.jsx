@@ -1,8 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectContactsList } from 'redux/constacts/selectors';
-import { addContact } from 'redux/constacts/operations';
-import { FaUserPlus } from 'react-icons/fa';
+import { selectContactsList } from '../../redux/contacts/selectors';
+import { addContact } from '../../redux/contacts/operations';
 import { Toaster } from 'react-hot-toast';
 import toast from 'react-hot-toast';
 import css from '../ContactForm/ContactForm.module.css';
@@ -74,7 +73,6 @@ export default function ContactForm({ onCloseModal }) {
               <ErrorMessage name="number" component="div" />
             </div>
             <button className={css.button} type="submit" disabled={isSubmitting}>
-              <FaUserPlus />
               New contact
             </button>
           </Form>

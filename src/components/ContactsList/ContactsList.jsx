@@ -9,7 +9,7 @@ import Contact from '../Contact/Contact';
 
 import css from '../ContactsList/ContactsList.module.css';
 
-export const ContactList = () => {
+export default function ContactList() {
   const contacts = useSelector(selectContactsList);
   const filter = useSelector(selectContactsFilter);
   const visibleContacts = [
@@ -25,4 +25,4 @@ export const ContactList = () => {
       ))}
     </ul>
   );
-};
+}

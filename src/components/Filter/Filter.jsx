@@ -3,7 +3,7 @@ import { setContactsFilter } from '../../redux/contacts/filters';
 import { selectContactsFilter } from '../../redux/contacts/selectors';
 import css from '../Filter/Filter.module.css';
 
-export const Filter = () => {
+export default function Filter() {
   const dispatch = useDispatch();
   const filter = useSelector(selectContactsFilter);
 
@@ -24,4 +24,4 @@ export const Filter = () => {
       />
     </label>
   );
-};
+}
