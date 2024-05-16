@@ -23,17 +23,19 @@ export default function Contact({ id, name, number }) {
   };
 
   return (
-    <div>
+    <div className={css.wrap}>
       <Toaster />
-      <p className={css.name}>
-        <FaUser />
-        {name}
-      </p>
-      <p className={css.number}>
-        <FaPhone />
-        {number}
-      </p>
-      <button className={css.button} onClick={() => handleDeleteContact(id)}>
+      <div className={css.content}>
+        <p className={css.name}>
+          <FaUser />
+          {name}
+        </p>
+        <p className={css.number}>
+          <FaPhone />
+          {number}
+        </p>
+      </div>
+      <button className={css.btn} onClick={() => handleDeleteContact(id)}>
         Delete
       </button>
     </div>

@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
+import css from '../LoginForm/LoginForm.module.css'
 
 export default function LoginForm() {
   const dispatch = useDispatch();
@@ -54,19 +55,19 @@ export default function LoginForm() {
         onSubmit={handleSubmit}
       >
         {formik => (
-          <Form autoComplete="off">
+          <Form autoComplete="off" className={css.form}>
             <div>
-              <label htmlFor="email">Email</label>
-              <Field type="email" id="email" name="email" placeholder="Enter email ..." />
-              <ErrorMessage name="email" component="div" className="error" />
+              <label htmlFor="email" className={css.label}>Email</label>
+              <Field className={css.input} type="email" id="email" name="email" placeholder="Enter email ..." />
+              <ErrorMessage className={css.error} name="email" component="div" />
             </div>
             <div>
-              <label htmlFor="password">Password</label>
-              <Field type="password" id="password" name="password" placeholder="Enter password ..." />
-              <ErrorMessage name="password" component="div" className="error" />
+              <label className={css.label} htmlFor="password">Password</label>
+              <Field className={css.input} type="password" id="password" name="password" placeholder="Enter password ..." />
+              <ErrorMessage className={css.error} name="password" component="div" />
             </div>
-            <button type="submit" disabled={formik.isSubmitting}>Log In</button>
-            <div>Do not have an account? <NavLink to="/register">Register</NavLink></div>
+            <button className={css.btn} type="submit" disabled={formik.isSubmitting}>Log In</button>
+            <div>Do not have an account? <NavLink className={css.link} to="/register">Register</NavLink></div>
           </Form>
         )}
       </Formik>

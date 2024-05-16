@@ -1,9 +1,9 @@
-import css from '../../components/Section/Section.module.css'
+import css from '../HomePage/HomePage.module.css'
 
 export default function HomePage() {
   return (
     <div className={css.container}>
-      <h1>Welcome to Phone Book</h1>
+      <h1 className={css.title}>Welcome to Phone Book</h1>
     </div>
   )
 }

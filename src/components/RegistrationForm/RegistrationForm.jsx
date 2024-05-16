@@ -5,6 +5,7 @@ import { Toaster } from 'react-hot-toast';
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
+import css from '../RegistrationForm/RegistrationForm.module.css';
 
 export default function RegisterForm() {
   const dispatch = useDispatch();
@@ -61,24 +62,24 @@ export default function RegisterForm() {
         onSubmit={handleSubmit}
       >
         {formik => (
-          <Form autoComplete="off">
+          <Form className={css.form} autoComplete="off">
             <div>
-              <label htmlFor="name">Name</label>
-              <Field type="text" id="name" name="name" placeholder="Enter name ..." />
+              <label className={css.label} htmlFor="name">Name</label>
+              <Field className={css.input} type="text" id="name" name="name" placeholder="Enter name ..." />
               <ErrorMessage name="name" component="div" className="error" />
             </div>
             <div>
-              <label htmlFor="email">Email</label>
-              <Field type="email" id="email" name="email" placeholder="Enter email ..." />
+              <label className={css.label} htmlFor="email">Email</label>
+              <Field className={css.input} type="email" id="email" name="email" placeholder="Enter email ..." />
               <ErrorMessage name="email" component="div" className="error" />
             </div>
             <div>
-              <label htmlFor="password">Password</label>
-              <Field type="password" id="password" name="password" placeholder="Enter password ..." />
+              <label className={css.label} htmlFor="password">Password</label>
+              <Field className={css.input} type="password" id="password" name="password" placeholder="Enter password ..." />
               <ErrorMessage name="password" component="div" className="error" />
             </div>
-            <button type="submit" disabled={formik.isSubmitting}>Register</button>
-            <div>Already have an account? <NavLink to="/login">LogIn</NavLink></div>
+            <button className={css.btn} type="submit" disabled={formik.isSubmitting}>Register</button>
+            <div>Already have an account? <NavLink className={css.link} to="/login">LogIn</NavLink></div>
           </Form>
         )}
       </Formik>

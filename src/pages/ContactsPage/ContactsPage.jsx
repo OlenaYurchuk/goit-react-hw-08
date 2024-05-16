@@ -29,7 +29,7 @@ export default function ContactPage() {
           <h2 className={css.title}>Contacts</h2>
           <div className={css.filterWrap}>
             <Filter />
-            <button className={css.button} type="button" onClick={handleOpenModal}>
+            <button className={css.btn} type="button" onClick={handleOpenModal}>
               New Contact
             </button>
           </div>

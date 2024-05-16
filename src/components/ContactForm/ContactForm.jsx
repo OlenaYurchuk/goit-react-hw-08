@@ -22,7 +22,7 @@ export default function ContactForm({ onCloseModal }) {
   };
 
   return (
-    <div>
+    <div className={css.container}>
       <Toaster />
       <Formik
         initialValues={{ name: '', number: '' }}
@@ -55,24 +55,36 @@ export default function ContactForm({ onCloseModal }) {
         }}
       >
         {({ isSubmitting }) => (
-          <Form autoComplete="off">
+          <Form
+            className={css.form}
+            autoComplete="off">
             <div>
+              <label htmlFor="name" className={css.label}>Name</label>
               <Field
+                className={css.input}
                 type="text"
                 name="name"
+                id="name"
                 placeholder="Enter name ..."
               />
-              <ErrorMessage name="name" component="div" />
+              <ErrorMessage
+                className={css.error}
+                name="name" component="div" />
             </div>
             <div>
+              <label htmlFor="number" className={css.label}>Number</label>
               <Field
+                className={css.input}
                 type="tel"
                 name="number"
+                id="number"
                 placeholder="Enter number ..."
               />
-              <ErrorMessage name="number" component="div" />
+              <ErrorMessage
+                className={css.error}
+                name="number" component="div" />
             </div>
-            <button className={css.button} type="submit" disabled={isSubmitting}>
+            <button className={css.btn} type="submit" disabled={isSubmitting}>
               New contact
             </button>
           </Form>

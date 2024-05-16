@@ -1,0 +1,13 @@
+.container {
+  padding: 38px 48px;
+  height: 100dvb;
+  border-radius: 32px 32px 0 0;
+  background-color: #f9f9f9;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+  font-size: 48px;
+}
